@@ -1,0 +1,50 @@
+spring:
+  profiles:
+    active: "dev"
+  # main:
+  #   banner-mode: "off"
+  mail:
+    host: "smtp.gmail.com"
+    port: "587"
+    username: "pree.devenv@gmail.com"
+    password: "evxtxvwmpbietjsz"
+
+    # Other properties
+    properties:
+      mail:
+        smtp:
+          auth: true
+          connectiontimeout: "5000"
+          timeout: "5000"
+          writetimeout: "5000"
+
+          # TLS , port 587
+          starttls:
+            enable: true
+
+          # SSL, post 465
+          socketFactory:
+            port: "465"
+            class: "javax.net.ssl.SSLSocketFactory"
+
+server:
+  servlet:
+    context-path: /v1
+  port: 8081
+---
+spring:
+  config: 
+    activate: 
+      on-profile: dev
+---
+spring:
+  config: 
+    activate: 
+      on-profile: uat
+
+---
+spring:
+  config: 
+    activate: 
+      on-profile: prod
+

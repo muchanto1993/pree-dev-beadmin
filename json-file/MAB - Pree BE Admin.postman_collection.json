@@ -1,0 +1,58 @@
+{
+	"info": {
+		"_postman_id": "f0f092e4-ec45-4b8a-b325-a2cbd418e43b",
+		"name": "MAB - Pree BE Admin",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Hello",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8081/v1/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"v1",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Mail",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"data\" : {\n\t\t\"to\": \"m.antoberlianto1993@gmail.com\",\n        \"subject\" : \"Testing from API Pree BE Admin\",\n        \"text\" : \"Hello World \\n API Pree BE Email\"\n\t},\n\t\"logtime\" : \"\",\n\t\"errorcode\" : \"\",\n\t\"errordescription\" : \"\",\n\t\"issuccess\" : null,\n\t\"apikey\" : \"\",\n\t\"messageguid\" : \"\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8081/v1/mail",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"v1",
+						"mail"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
